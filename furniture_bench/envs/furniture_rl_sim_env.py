@@ -1171,6 +1171,12 @@ class FurnitureSimEnv(gym.Env):
                 f"{root}/{timestamp}_{cam}_sim_depth.png",
             )
 
+    def debug_joint_info(self):
+        joint_positions = self.dof_pos[:, :7]
+        joint_velocities = self.dof_vel[:, :7]
+        joint_torques = self.forces
+        return joint_positions, joint_velocities, joint_torques
+
     def _read_robot_state(self):
         joint_positions = self.dof_pos[:, :7]
         joint_velocities = self.dof_vel[:, :7]
