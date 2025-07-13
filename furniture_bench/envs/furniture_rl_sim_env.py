@@ -2366,3 +2366,6 @@ class FurnitureRLSimEnv(FurnitureSimEnv):
         self._apply_forces_to_parts(
             env_idxs, self.max_force_magnitude, self.max_torque_magnitude
         )
+
+    def set_assembled_pos_threshold(self, assembled_pos_threshold):
+        self.furniture.assembled_pos_threshold = assembled_pos_threshold
