@@ -1719,6 +1719,10 @@ class FurnitureRLSimEnv(FurnitureSimEnv):
             self.max_torque_magnitude = 0.007
             self.max_obstacle_offset = 0.02
             self.franka_joint_rand_lim_deg = np.radians(5)
+            # self.max_force_magnitude = 0.0
+            # self.max_torque_magnitude = 0.0
+            # self.max_obstacle_offset = 0.0
+            # self.franka_joint_rand_lim_deg = np.radians(0)
         elif self.randomness == Randomness.MEDIUM:
             self.max_force_magnitude = 0.5
             self.max_torque_magnitude = 0.01
